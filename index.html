@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>Media Kit — Primeiros Passos Podcast</title>
-<meta name="description" content="Media Kit do Primeiros Passos Podcast — os primeiros passos da maternidade, do desejo de engravidar à vida com os filhos.">
+<meta name="description" content="Media Kit do Primeiros Passos Podcast — sobre ser mãe sem deixar de ser mulher, com ciência, humor e vivência real.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito+Sans:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
@@ -112,6 +112,13 @@ nav.hidden{transform:translateY(-100%)}
 .pillar h3{font-family:'Fredoka',sans-serif;font-weight:600;font-size:18px;margin-bottom:8px}
 .pillar p{font-size:12.5px;color:var(--dim);line-height:1.55}
 
+/* ── FORMATO ── */
+.format-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin:36px 0 56px}
+.format-card{background:var(--white);border:2px solid var(--navy);border-radius:22px;padding:28px;box-shadow:5px 5px 0 rgba(18,37,82,.06)}
+.format-card .fmt-eye{font-family:'Nunito Sans',sans-serif;font-size:10.5px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--orange);margin-bottom:10px;display:block}
+.format-card h3{font-family:'Fredoka',sans-serif;font-weight:600;font-size:21px;margin-bottom:10px}
+.format-card p{font-size:13px;color:var(--dim);line-height:1.65}
+
 /* ── VOZES (HOSTS) ── */
 #vozes{padding:110px 0;background:var(--white);position:relative;overflow:hidden;border-top:2px solid var(--navy);border-bottom:2px solid var(--navy)}
 .host-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-top:56px}
@@ -120,23 +127,28 @@ nav.hidden{transform:translateY(-100%)}
 .host-photo{width:96px;height:96px;border-radius:50%;object-fit:cover;border:3px solid var(--navy);flex-shrink:0}
 .host-name{font-family:'Fredoka',sans-serif;font-weight:600;font-size:26px;line-height:1.1}
 .host-tag{display:inline-block;margin-top:6px;font-size:11px;font-weight:800;letter-spacing:.04em;text-transform:uppercase;padding:5px 12px;border-radius:100px}
-.host-card.marina .host-tag{background:rgba(46,110,245,.15);color:#1c3f9e}
+.host-card.ingrid .host-tag{background:rgba(46,110,245,.15);color:#1c3f9e}
 .host-card.leticia .host-tag{background:rgba(246,137,181,.22);color:#8a2c5c}
+.identity-tags{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0 18px}
+.identity-tag{font-size:10.5px;font-weight:800;letter-spacing:.03em;text-transform:uppercase;color:var(--dim);background:rgba(18,37,82,.06);padding:5px 11px;border-radius:100px}
 .host-bio{font-size:14px;color:#3a4457;line-height:1.75;margin-bottom:24px}
-.host-handle{font-size:12px;font-weight:700;color:var(--dim);margin-bottom:20px;display:block}
+.host-handle{font-size:12px;font-weight:700;font-style:italic;color:var(--dim);margin-bottom:20px;display:block}
 .host-stats{display:grid;grid-template-columns:1fr 1fr;gap:2px;background:var(--navy);border-radius:16px;overflow:hidden;margin-bottom:20px}
+.host-stats.cols-3{grid-template-columns:repeat(3,1fr)}
 .host-stat{background:var(--white);padding:18px 16px}
 .host-stat-num{font-family:'Fredoka',sans-serif;font-weight:600;font-size:24px;line-height:1}
-.host-card.marina .host-stat-num{color:var(--blue)}
+.host-card.ingrid .host-stat-num{color:var(--blue)}
 .host-card.leticia .host-stat-num{color:var(--pink)}
 .host-stat-lbl{font-size:10.5px;font-weight:700;color:var(--dim);margin-top:6px;text-transform:uppercase;letter-spacing:.03em}
 .host-split{background:var(--white);border-radius:14px;padding:16px 18px}
 .host-split-lbl{font-size:10.5px;font-weight:800;text-transform:uppercase;letter-spacing:.05em;color:var(--dim);margin-bottom:10px}
 .split-track{height:14px;border-radius:100px;background:rgba(18,37,82,.08);overflow:hidden;display:flex}
 .split-fill{height:100%;width:0;transition:width 1.2s cubic-bezier(.16,1,.3,1)}
-.host-card.marina .split-fill{background:var(--blue)}
+.host-card.ingrid .split-fill{background:var(--blue)}
 .host-card.leticia .split-fill{background:var(--pink)}
 .split-legend{display:flex;justify-content:space-between;font-size:11px;color:var(--dim);margin-top:8px;font-weight:700}
+.host-specialties{display:flex;flex-wrap:wrap;gap:8px}
+.host-specialty{font-size:11px;font-weight:700;color:var(--navy);background:var(--white);border:1.5px solid rgba(18,37,82,.18);padding:6px 13px;border-radius:100px}
 
 /* ── PARCERIAS (PRODUCTS) ── */
 #parcerias{padding:110px 0;position:relative;overflow:hidden}
@@ -195,6 +207,7 @@ footer{background:var(--cream);padding:0 48px;display:flex;align-items:center;ju
   .hero-bar{grid-template-columns:repeat(2,1fr)}
   .conceito-grid{grid-template-columns:1fr;gap:36px}
   .pillars{grid-template-columns:repeat(2,1fr)}
+  .format-grid{grid-template-columns:1fr}
   .host-grid{grid-template-columns:1fr}
   .prod-grid{grid-template-columns:1fr}
   .prod-sub{text-align:left;max-width:100%}
@@ -211,6 +224,7 @@ footer{background:var(--cream);padding:0 48px;display:flex;align-items:center;ju
   .hero-bar{grid-template-columns:1fr 1fr;gap:10px}
   .hero-bar-item{padding:16px}
   .host-stats{grid-template-columns:1fr 1fr}
+  .host-stats.cols-3{grid-template-columns:1fr}
   .cta-strip{flex-direction:column;align-items:flex-start;padding:24px}
   .cta-strip a{width:100%;text-align:center}
   .contact-btns{flex-direction:column;width:100%}
@@ -242,17 +256,17 @@ footer{background:var(--cream);padding:0 48px;display:flex;align-items:center;ju
 <!-- MARQUEE -->
 <div class="marquee-wrap" style="position:fixed;top:72px;left:0;right:0;z-index:150">
   <div class="marquee-track">
-    <span class="marquee-item"><span class="marquee-dot"></span>+16,6 mil seguidoras somadas nas apresentadoras</span>
-    <span class="marquee-item"><span class="marquee-dot" style="background:var(--pink)"></span>+1,6 milhão de visualizações somadas / mês</span>
-    <span class="marquee-item"><span class="marquee-dot" style="background:var(--turq)"></span>78% de alcance vindo de fora da base de seguidoras</span>
-    <span class="marquee-item"><span class="marquee-dot" style="background:var(--yellow)"></span>Conduzido por uma médica especialista em gestação de alto risco</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>584 mil visualizações somadas por mês nas apresentadoras</span>
+    <span class="marquee-item"><span class="marquee-dot" style="background:var(--pink)"></span>+626 novas seguidoras conquistadas por mês</span>
+    <span class="marquee-item"><span class="marquee-dot" style="background:var(--turq)"></span>Duas psicólogas infantis, mães e empreendedoras</span>
+    <span class="marquee-item"><span class="marquee-dot" style="background:var(--yellow)"></span>Quadro Vivências: histórias reais de mães e pais</span>
     <span class="marquee-item"><span class="marquee-dot"></span>Cotas de lançamento disponíveis</span>
     <span class="marquee-item"><span class="marquee-dot" style="background:var(--pink)"></span>Uma produção Grupo Invoice</span>
     <!-- duplicate for seamless loop -->
-    <span class="marquee-item"><span class="marquee-dot"></span>+16,6 mil seguidoras somadas nas apresentadoras</span>
-    <span class="marquee-item"><span class="marquee-dot" style="background:var(--pink)"></span>+1,6 milhão de visualizações somadas / mês</span>
-    <span class="marquee-item"><span class="marquee-dot" style="background:var(--turq)"></span>78% de alcance vindo de fora da base de seguidoras</span>
-    <span class="marquee-item"><span class="marquee-dot" style="background:var(--yellow)"></span>Conduzido por uma médica especialista em gestação de alto risco</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>584 mil visualizações somadas por mês nas apresentadoras</span>
+    <span class="marquee-item"><span class="marquee-dot" style="background:var(--pink)"></span>+626 novas seguidoras conquistadas por mês</span>
+    <span class="marquee-item"><span class="marquee-dot" style="background:var(--turq)"></span>Duas psicólogas infantis, mães e empreendedoras</span>
+    <span class="marquee-item"><span class="marquee-dot" style="background:var(--yellow)"></span>Quadro Vivências: histórias reais de mães e pais</span>
     <span class="marquee-item"><span class="marquee-dot"></span>Cotas de lançamento disponíveis</span>
     <span class="marquee-item"><span class="marquee-dot" style="background:var(--pink)"></span>Uma produção Grupo Invoice</span>
   </div>
@@ -269,36 +283,36 @@ footer{background:var(--cream);padding:0 48px;display:flex;align-items:center;ju
     <p class="hero-eyebrow">Media Kit · Primeiros Passos Podcast · 2026</p>
     <div class="hero-main">
       <h1 class="hero-headline reveal">
-        O primeiro passo<br>
-        não é do bebê.<br>
-        É de quem decide<br>
-        <span class="accent">ser mãe.</span>
+        Tem a mãe.<br>
+        Tem a mulher.<br>
+        As duas cabem<br>
+        <span class="accent">no mesmo passo.</span>
       </h1>
       <div class="hero-side reveal-right">
         <div class="hero-photos">
-          <img src="assets/marina.jpg" alt="Dra. Marina Pedral">
+          <img src="assets/ingrid.jpg" alt="Ingrid Popper">
           <img src="assets/leticia.jpg" alt="Letícia">
         </div>
-        <p>O <strong>Primeiros Passos</strong> acompanha mulheres em toda a jornada da maternidade — do desejo de engravidar à rotina real com os filhos. Conduzido por uma médica especialista em gestação de alto risco e uma educadora parental, unindo ciência e afeto em cada conversa.</p>
+        <p>O <strong>Primeiros Passos</strong> fala sobre ser mãe sem deixar de ser mulher — com as várias versões que isso pode ter. Conduzido por duas psicólogas infantis, mães e empreendedoras, que unem ciência, humor e vivência real em cada conversa.</p>
         <a href="https://wa.me/554791252172?text=Ol%C3%A1!%20Vi%20o%20Media%20Kit%20do%20Primeiros%20Passos%20Podcast%20e%20quero%20saber%20mais%20sobre%20parcerias." target="_blank" rel="noopener" class="hero-btn">Quero conhecer o projeto →</a>
       </div>
     </div>
     <div class="hero-bar reveal">
       <div class="hero-bar-item">
-        <div class="hero-bar-num">+16,6 mil</div>
-        <div class="hero-bar-lbl">Seguidoras somadas (Marina + Letícia)</div>
-      </div>
-      <div class="hero-bar-item">
-        <div class="hero-bar-num">+1,6 mi</div>
+        <div class="hero-bar-num">584 mil</div>
         <div class="hero-bar-lbl">Visualizações somadas por mês</div>
       </div>
       <div class="hero-bar-item">
-        <div class="hero-bar-num">190 mil+</div>
-        <div class="hero-bar-lbl">Contas únicas alcançadas por mês</div>
+        <div class="hero-bar-num">+626</div>
+        <div class="hero-bar-lbl">Novas seguidoras conquistadas por mês</div>
       </div>
       <div class="hero-bar-item">
-        <div class="hero-bar-num">78%</div>
-        <div class="hero-bar-lbl">Alcance orgânico, fora da base de seguidoras</div>
+        <div class="hero-bar-num">2</div>
+        <div class="hero-bar-lbl">Psicólogas infantis, mães e empreendedoras</div>
+      </div>
+      <div class="hero-bar-item">
+        <div class="hero-bar-num">100%</div>
+        <div class="hero-bar-lbl">Conteúdo com ciência e vivência real</div>
       </div>
     </div>
   </div>
@@ -310,34 +324,46 @@ footer{background:var(--cream);padding:0 48px;display:flex;align-items:center;ju
     <div class="conceito-grid">
       <div class="conceito-copy reveal-left">
         <p class="s-eye orange">Conceito</p>
-        <h2 class="s-title">Primeiro passo<br>não é só andar.</h2>
-        <p>Toda mulher que sonha em ser mãe atravessa uma sequência de primeiros passos muito antes do parto: a decisão de tentar, a espera, as dúvidas, os exames, as descobertas — boas e difíceis. <strong>O Primeiros Passos nasce para caminhar ao lado dela em cada um desses momentos</strong>, com informação médica séria e uma conversa de mulher para mulher, sem julgamento e sem pressa.</p>
-        <p>Não é um podcast sobre bebês. É um podcast sobre o que acontece com <strong>quem decide construir uma família</strong> — antes, durante e depois de qualquer "primeiro passo".</p>
+        <h2 class="s-title">Mãe é só uma<br>das suas versões.</h2>
+        <p>Toda mulher que se torna mãe carrega, ao mesmo tempo, várias outras versões de si — a que gostava de correr, a que amava pintar, a que sonhava com uma viagem sozinha. Muitas vezes essas versões ficam para depois. Às vezes ficam esquecidas. <strong>O Primeiros Passos existe para lembrar que dá para ser mãe sem deixar de ser mulher.</strong></p>
+        <p>Aqui a conversa une ciência e vivência prática — de quem estuda o desenvolvimento infantil e de quem vive a maternidade real todos os dias. Tem leveza onde o assunto pesa, <strong>tem humor onde dói</strong>, e tem informação de verdade para orientar decisões difíceis.</p>
       </div>
       <div class="conceito-quote reveal-right">
-        "Aqui cada voz importa — a da mãe de primeira viagem, a de quem ainda está tentando, a de quem já perdeu e segue tentando de novo."
+        "No quadro Vivências, mães e pais reais contam suas histórias sem filtro — para lembrar que ninguém erra sozinho, e ninguém acerta sozinho também."
+      </div>
+    </div>
+    <div class="format-grid reveal">
+      <div class="format-card">
+        <span class="fmt-eye">Formato 1</span>
+        <h3>Entrevistas</h3>
+        <p>Conversas com especialistas que estudam e vivem o desenvolvimento infantil e a saúde da mulher — ciência traduzida em orientação prática para o dia a dia.</p>
+      </div>
+      <div class="format-card">
+        <span class="fmt-eye">Formato 2</span>
+        <h3>Quadro Vivências</h3>
+        <p>Mães e pais reais contando suas histórias sem filtro. Verdade, humor e pontos para refletir — sem receita pronta, sem julgamento.</p>
       </div>
     </div>
     <div class="pillars reveal">
       <div class="pillar">
         <img src="assets/mascot_estrela_web.png" alt="">
         <h3>Leveza</h3>
-        <p>Conteúdo acessível, com linguagem simples e acolhedora — sem jargão médico desnecessário.</p>
+        <p>Conversas que trazem humor e respiro para os temas mais pesados da maternidade e da vida da mulher.</p>
       </div>
       <div class="pillar">
         <img src="assets/mascot_coracao_web.png" alt="">
         <h3>Acolhimento</h3>
-        <p>Falas que abraçam, valorizam e respeitam cada mulher e cada família, em qualquer fase da jornada.</p>
+        <p>Falas que abraçam, valorizam e respeitam cada mulher e cada família, em qualquer versão que ela viva.</p>
       </div>
       <div class="pillar">
         <img src="assets/mascot_guia_web.png" alt="">
         <h3>Descoberta</h3>
-        <p>Informação médica e emocional para cada etapa — da tentativa de engravidar à primeira infância.</p>
+        <p>Ciência e prática juntas — do desenvolvimento infantil às versões da mulher por trás da mãe.</p>
       </div>
       <div class="pillar">
         <img src="assets/mascot_voz_web.png" alt="">
         <h3>Crescimento</h3>
-        <p>De pequenas dúvidas a grandes decisões — cada episódio é um passo adiante.</p>
+        <p>De pequenas dúvidas a grandes decisões — para a criança e para quem cuida dela.</p>
       </div>
     </div>
   </div>
@@ -348,31 +374,34 @@ footer{background:var(--cream);padding:0 48px;display:flex;align-items:center;ju
   <div class="wrap">
     <div class="reveal">
       <p class="s-eye pink">Quem conduz</p>
-      <h2 class="s-title">Duas mulheres.<br>Duas formações.<br class="mob-only"> Uma escuta só.</h2>
+      <h2 class="s-title">Duas psicólogas.<br>Duas mulheres.<br> Muitas versões.</h2>
     </div>
 
     <div class="host-grid">
-      <!-- MARINA -->
-      <div class="host-card marina reveal-left">
+      <!-- INGRID -->
+      <div class="host-card ingrid reveal-left">
         <div class="host-top">
-          <img src="assets/marina.jpg" class="host-photo" alt="Dra. Marina Pedral">
+          <img src="assets/ingrid.jpg" class="host-photo" alt="Ingrid Popper">
           <div>
-            <div class="host-name">Dra. Marina Pedral</div>
-            <span class="host-tag">Médica · Gestação de Alto Risco</span>
+            <div class="host-name">Ingrid Popper</div>
+            <span class="host-tag">Psicóloga Infantil</span>
           </div>
         </div>
-        <span class="host-handle">@dra.marinapedral</span>
-        <p class="host-bio">Acompanha gestações de alto risco há anos, ao lado de mulheres nos momentos mais delicados da espera por um filho. No Primeiros Passos, traz a base médica e o olhar técnico que a jornada da maternidade exige — sem perder o acolhimento de quem já segurou a mão de muitas mães com medo.</p>
-        <div class="host-stats">
-          <div class="host-stat"><div class="host-stat-num">10,2 mil</div><div class="host-stat-lbl">Seguidoras (+5,6%/mês)</div></div>
-          <div class="host-stat"><div class="host-stat-num">1,14 mi</div><div class="host-stat-lbl">Visualizações / 30 dias</div></div>
-          <div class="host-stat"><div class="host-stat-num">65,1 mil</div><div class="host-stat-lbl">Contas alcançadas</div></div>
-          <div class="host-stat"><div class="host-stat-num">960 mil</div><div class="host-stat-lbl">Views em Reels</div></div>
+        <div class="identity-tags">
+          <span class="identity-tag">Mãe</span>
+          <span class="identity-tag">Empreendedora</span>
         </div>
-        <div class="host-split">
-          <p class="host-split-lbl">Origem do alcance</p>
-          <div class="split-track"><div class="split-fill" data-w="92"></div></div>
-          <div class="split-legend"><span>92% não seguidoras</span><span>8% seguidoras</span></div>
+        <span class="host-handle">"Entre a ciência e o brincar"</span>
+        <p class="host-bio">Psicóloga formada pela UNIVALI, com especializações em Análise do Comportamento Aplicada (ABA), Desenvolvimento Infantil e Avaliação Neuropsicológica. Observa o que existe por trás de cada comportamento e transforma conhecimento científico em estratégias reais — muitas vezes através do brincar. Para Ingrid, uma pequena conquista de uma criança pode representar uma grande transformação para toda a família.</p>
+        <div class="host-stats cols-3">
+          <div class="host-stat"><div class="host-stat-num">58 mil</div><div class="host-stat-lbl">Visualizações / mês</div></div>
+          <div class="host-stat"><div class="host-stat-num">+34</div><div class="host-stat-lbl">Novas seguidoras / mês</div></div>
+          <div class="host-stat"><div class="host-stat-num">97</div><div class="host-stat-lbl">Conteúdos publicados</div></div>
+        </div>
+        <div class="host-specialties">
+          <span class="host-specialty">ABA</span>
+          <span class="host-specialty">Desenvolvimento Infantil</span>
+          <span class="host-specialty">Avaliação Neuropsicológica</span>
         </div>
       </div>
 
@@ -382,11 +411,15 @@ footer{background:var(--cream);padding:0 48px;display:flex;align-items:center;ju
           <img src="assets/leticia.jpg" class="host-photo" alt="Letícia">
           <div>
             <div class="host-name">Letícia</div>
-            <span class="host-tag">Educadora Parental</span>
+            <span class="host-tag">Psicóloga Infantil</span>
           </div>
         </div>
+        <div class="identity-tags">
+          <span class="identity-tag">Mãe</span>
+          <span class="identity-tag">Empreendedora</span>
+        </div>
         <span class="host-handle">Maternidade real, sem filtro</span>
-        <p class="host-bio">Fala sobre criação respeitosa, rotina com os filhos e os bastidores nada perfeitos da maternidade. No Primeiros Passos, é a voz de quem vive o dia a dia — os desafios, as pequenas vitórias e os aprendizados que só a prática ensina.</p>
+        <p class="host-bio">Psicóloga infantil, mãe e empreendedora, fala sobre criação respeitosa, rotina com os filhos e os bastidores nada perfeitos da maternidade — sem esconder que, por trás da mãe, também existe uma mulher com suas próprias versões. No Primeiros Passos, é a voz de quem vive o dia a dia: os desafios, as pequenas vitórias e os aprendizados que só a prática ensina.</p>
         <div class="host-stats">
           <div class="host-stat"><div class="host-stat-num">6,4 mil</div><div class="host-stat-lbl">Seguidoras (+10,2%/mês)</div></div>
           <div class="host-stat"><div class="host-stat-num">526 mil</div><div class="host-stat-lbl">Visualizações / 30 dias</div></div>
@@ -422,8 +455,8 @@ footer{background:var(--cream);padding:0 48px;display:flex;align-items:center;ju
       </div>
       <div class="prod-card">
         <p class="prod-n">Episódio Patrocinado</p>
-        <p class="prod-d">Um episódio inteiro co-criado com sua marca, sobre um tema relevante da jornada da maternidade.</p>
-        <ul class="prod-inc"><li>Pauta desenvolvida com a marca</li><li>Gravação e produção completa</li><li>Divulgação nos perfis de Marina e Letícia</li></ul>
+        <p class="prod-d">Um episódio inteiro co-criado com sua marca, sobre um tema relevante da maternidade e da vida da mulher.</p>
+        <ul class="prod-inc"><li>Pauta desenvolvida com a marca</li><li>Gravação e produção completa</li><li>Divulgação nos perfis de Ingrid e Letícia</li></ul>
         <p class="prod-cta-link">Consultar disponibilidade →</p>
       </div>
       <div class="prod-card">
@@ -434,7 +467,7 @@ footer{background:var(--cream);padding:0 48px;display:flex;align-items:center;ju
       </div>
       <div class="prod-card">
         <p class="prod-n">Palestra / Live</p>
-        <p class="prod-d">Marina e/ou Letícia como convidadas no seu evento, live ou treinamento sobre saúde gestacional e parentalidade.</p>
+        <p class="prod-d">Ingrid e/ou Letícia como convidadas no seu evento, live ou treinamento sobre desenvolvimento infantil, parentalidade e saúde da mulher.</p>
         <ul class="prod-inc"><li>Formato presencial ou online</li><li>Adaptação ao tema e público</li><li>Divulgação nas redes das apresentadoras</li></ul>
         <p class="prod-cta-link">Consultar disponibilidade →</p>
       </div>
@@ -466,7 +499,7 @@ footer{background:var(--cream);padding:0 48px;display:flex;align-items:center;ju
   <div class="footer-big">PRIMEIROS PASSOS</div>
   <div class="footer-meta">
     <p>© 2026 Grupo Invoice</p>
-    <p>Primeiros Passos Podcast · Dra. Marina Pedral · Letícia</p>
+    <p>Primeiros Passos Podcast · Ingrid Popper · Letícia</p>
     <p style="margin-top:8px;color:rgba(18,37,82,.35)">Media Kit · Confidencial · Para uso comercial</p>
   </div>
 </footer>
